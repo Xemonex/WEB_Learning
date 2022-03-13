@@ -3,6 +3,7 @@
   <head>
     <title>B&M Society</title>
     <link rel="stylesheet" href="css/css_rwd_2.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Moul" > 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Xemon">
@@ -15,63 +16,77 @@
     </header>
 
     <main>
-      <p id="description">
-        Hello, welcome to premium membership of our small bussiness & market society! Before we continue with the great experiences that this membership gives you, we would like to ask you for a minute of your time.
-      </p>
-      <form id="survey-form">
-        <legend>Please fill our survey so we can provide you with better services
-          <br>
-          (<span class="star">*</span> indicates mandatory)
-        </legend>
-        <label id="name-label" for="name">Name(<span class="star">*</span>)</label>
-        <br>
-        <input id="name" type="text" name="text" placeholder="Firstname Lastname" label="Write down your firstname and lastname." required>
-        <br>
-        <label id="email-label" for="email">E-mail(<span class="star">*</span>)</label>
-        <br>
-        <input id="email" type="email" name="email" placeholder="your@email.com" label="Write down your e-mail" required>
-        <br>
-        <label id="nuber-label" for="number">Age</label>
-        <br>
-        <input id="number" type="number" name="age" placeholder="Your age" label="Write down your age" min="12" max="110">
-        <br>
-        <legend>Sex </legend>
-        <input id="male" type="radio" name="sex" value="male">
-        <label for="male">Male</label>
-        <input id="female" type="radio" name="sex" value="female">
-        <label for="female">Female</label>
-        <br>
-        <label for="dropdown">Source of income:</labe>
-        <select id="dropdown" name="income">
-          <option value="employee">Employee</option>
-          <option value="entrepreneur">Entrepreneur</option>
-          <option value="pension">Pension</option>
-          <option value="student">Student</option>
-        </select>
-        <br>
-        <legend>Select how you know us:</legend>
-        <br>
-        <input id="advertisement" type="checkbox" value="advertisement">
-        <label for="advertisement">Advertisement</label>
-        <br>
-        <input id="friends" type="checkbox" value="friends">
-        <label for="friends">Friends</label>
-        <br>
-        <input id="searche" type="checkbox" value="searche">
-        <label for="searche">Search engine</label>
-        <br>
-        <input id="social" type="checkbox" value="social">
-        <label for="social">Social networks</label>
-        <br>
-        <input id="webpage" type="checkbox" value="webpage">
-        <label for="webpage">Other webpage</label>
-        <br>
-        <label for="suggestions">Any suggestions to improve our services?</label>
-        <br>
-        <textarea id="suggestions" placeholder="Your suggestions..." rows="4" cols="40"></textarea>
-        <br>
-        <button id="submit" type="submit">Submit</button>
-
+      <div id="description-box">
+        <div class="header-form"></div>
+        <p id="description">
+          Hello, welcome to premium membership of our small bussiness & market society! Before we continue with the great experiences that this membership gives you, we would like to ask you for a minute of your time.
+        </p>
+      </div>
+      <div id="form-box">
+        <div class="header-form"></div>
+        <form id="survey-form">
+          <legend>Please fill our survey so we can provide you with better services
+            <br>
+            <span id="mandatory-info">(<span class="star">*</span> indicates mandatory)</span>
+          </legend>
+          <div class="q-cont">
+            <label id="name-label" class="question" for="name">Name(<span class="star">*</span>)</label>
+            <br>
+            <input id="name" type="text" name="text" placeholder="Firstname Lastname" label="Write down your firstname and lastname." required>
+          </div>
+          <div class="q-cont">
+            <label id="email-label" class="question" for="email">E-mail(<span class="star">*</span>)</label>
+            <br>
+            <input id="email" type="email" name="email" placeholder="your@email.com" label="Write down your e-mail" required>
+          </div>
+          <div class="q-cont">
+            <label id="nuber-label" class="question" for="number">Age</label>
+            <br>
+            <input id="number" type="number" name="age" placeholder="Your age" label="Write down your age" min="12" max="110">
+          </div>
+          <div class="q-cont">
+            <legend class="question">Sex </legend>
+            <input id="male" class="radio-box" type="radio" name="sex" value="male">
+            <label for="male">Male</label>
+            <input id="female" class="radio-box" type="radio" name="sex" value="female">
+            <label for="female">Female</label>
+          </div>
+          <div class="horizontal"></div>
+          <div class="q-cont">
+            <label class="question" for="dropdown">Source of income</label>
+            <br>
+            <select id="dropdown" name="income">
+              <option disabled="" selected="" value="">Please select current income source</option>
+              <option value="employee">Employee</option>
+              <option value="entrepreneur">Entrepreneur</option>
+              <option value="pension">Pension</option>
+              <option value="student">Student</option>
+            </select>
+          </div>
+          <div class="q-cont">
+            <legend class="question">Select how you know us</legend>
+            <input id="advertisement" class="check-box" type="checkbox" value="advertisement">
+            <label for="advertisement">Advertisement</label>
+            <br>
+            <input id="friends" class="check-box" type="checkbox" value="friends">
+            <label for="friends">Friends</label>
+            <br>
+            <input id="searche" class="check-box" type="checkbox" value="searche">
+            <label for="searche">Search engine</label>
+            <br>
+            <input id="social" class="check-box" type="checkbox" value="social">
+            <label for="social">Social networks</label>
+            <br>
+            <input id="webpage" class="check-box" type="checkbox" value="webpage">
+            <label for="webpage">Other webpage</label>
+            <br>
+          </div>
+          <div class="q-cont">
+            <label class="question" for="suggestions">Any suggestions to improve our services?</label>
+            <textarea id="suggestions" placeholder="Your suggestions..." rows="4" cols="70"></textarea>
+          </div>
+          <button id="submit" type="submit">Submit</button>
+        </div>
       </form>
 
     </main>
