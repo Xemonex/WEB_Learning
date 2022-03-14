@@ -5,6 +5,7 @@ body {
   overflow-x: hidden;
 }
 
+/* White line background and heading formatting */
 header {
 width: 100%;
 margin: -8px -8px 30px -8px;
@@ -15,11 +16,13 @@ background-color: #F7F9FF;
 overflow: hidden;
 }
 
+
 main {
   width: 600px;
   margin: auto;
 }
 
+/* Responsive design for portable devices */
 @media (max-width:1000px) {
   main {
     width: 65%;
@@ -32,6 +35,8 @@ main {
   }
 }
 
+/* Container and visual box for isolated description paragraph,
+  same as following box that contains form - "#form-box" */
 #description-box {
   margin-bottom: 40px;
   background-color: #F7F9FF;
@@ -48,6 +53,7 @@ main {
   line-height: 140%;
 }
 
+/* Purple  stripe used in header of container boxes*/
 .header-form {
   height: 35px;
   background-color: #6F2FED;
@@ -59,23 +65,21 @@ input {
   padding-left: 8px;
 }
 
+/* Light blue highlighting when hovering over input forms */
 input:hover {
   animation-name: input-hover;
   animation-duration: 200ms;
   animation-fill-mode: both;
 }
 
+/* Animated for smoother look */
 @keyframes input-hover {
   100% {
     background-color: hsl(260, 95%, 97%);
   }
 }
 
-textarea {
-  border: 2px solid #6F2FED;
-}
-
-
+/* Main container and box for form */
 #form-box {
   margin: auto;
   border: 1px solid #6F3FED;
@@ -89,10 +93,12 @@ form {
   font-size: 0.9em;
 }
 
+/* For red star symbols which indicates mandatory */
 .star {
   color: red;
 }
 
+/* Adjust text about mandatory informations, to be smaller and less dirtruptive*/
 #mandatory-info {
   font-size: 0.75em;
   font-style: italic;
@@ -106,15 +112,18 @@ label {
   margin-bottom:8px;
 }
 
+/* Qestion + answer container */
 .q-cont {
   margin-bottom: 20px;
   margin-right: 10px;
 }
 
+/* Survey questions (label) emphasis */
 .question {
   font-size: 1.15em;
 }
 
+/* Text input design settings */
 #name, #email, #number {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -123,11 +132,13 @@ label {
   font-size: 0.8em;
 }
 
+/* Prettier bigger radioboxes */
 .radio-box {
   height: 1em;
   width: 1em;
 }
 
+/* Custom horizontal separator */
 .horizontal {
   border-bottom: 2.5px solid #AA81FC;
   margin-bottom: 20px;
@@ -141,12 +152,14 @@ select {
   height: 2em;
 }
 
+/* Prettier bigger checkboxes + horizontal spacing between rows */
 .check-box {
   height: 1em;
   width: 1em;
   margin-bottom: 12px;
 }
 
+/* Textarea with locked horizonal resize + custom color border */
 textarea {
   margin-top: 16px;
   margin-bottom: 16px;
@@ -155,6 +168,7 @@ textarea {
   width: 100%;
   resize: vertical;
   font-size: 0.8em;
+  border: 2px solid #6F2FED;
 }
 
 button {
@@ -169,6 +183,7 @@ button {
   overflow: hidden;
 }
 
+/* Glowing button hover effect*/
 button:hover {
   animation-name: button-hover;
   animation-duration: 300ms;
@@ -184,6 +199,8 @@ button:hover {
   }
 }
 
+
+/* Ripple effect on click from w3schools.com */
 button:after {
   content: "";
   background: hsl(260, 84%, 84%);
