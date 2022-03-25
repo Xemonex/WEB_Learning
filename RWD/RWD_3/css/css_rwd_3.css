@@ -1,0 +1,277 @@
+html {
+  overflow-x: hidden;
+  font-size: 1vw;
+}
+
+body {
+  margin: 0px;
+  font-family: Eina, sans-serif;
+  --web-blue: #03528B;
+  --web-orange: #D65A17;
+  --web-gray: rgb(210, 205, 205);
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://assets.weforum.org/project/image/iDTsfGXFjl9zlU6Ne8-6a7ZZepK_EzBHYeOnSfqvcYA.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nav-bar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 4vw;
+  background-color: rgba(210, 205, 205, 0.92);
+}
+
+#header-img-box {
+  margin-left: 6vw;
+  width: 20%;
+  padding: 0.2vw 0.2vw 0.6vw 0.2vw;
+  opacity: 0.46;
+}
+
+#header-img {
+  height: 100%;
+  width: auto;
+  background-color: none;
+  border-radius: 100vw;
+  border: solid;
+  border-color: rgba(210, 205, 205, 0.92);
+  transition-property: border;
+  transition-duration: 650ms;
+}
+
+#header-img:hover {
+  border: solid;
+  border-color: var(--web-orange);
+}
+
+#nav-bar ul {
+  width: 80%;
+  list-style: none;
+  margin-right: 2vw;
+}
+
+#nav-bar li {
+  float: right;
+  margin-right: 4vw;
+  transition-property: color;
+  transition-duration: 650ms;
+}
+
+#nav-bar li:hover {
+  color: var(--web-orange);
+}
+
+#nav-bar li:active {
+  transition: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.55rem;
+}
+
+#header-text {
+  position: relative;
+  top: 12vw;
+  left: 12vw;
+}
+
+h1 {
+  font-size: 2.9rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: #F9F0F0;
+  margin-top: 0vw;
+}
+
+#header-text p {
+  font-size: 1.6rem;
+  font-family: Eina, sans-serif;
+  font-weight: inherit;
+  font-style: italic;
+  color: #F9F0F0;
+}
+
+#quality {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+  font-size: 1.6rem;
+}
+
+.q-box {
+  display:flex;
+  width: 60vw;
+  height: 11vw;
+  justify-content: center;
+  margin: 1vw 0vw 1vw 0vw;
+}
+
+.q-imgbox {
+  width: 20%;
+}
+
+.q-img {
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+  border-radius: 100vw;
+}
+
+.q-text {
+  width: 75%;
+  margin-left: 4vw;
+  display: flex;
+  align-items: center;
+}
+
+#video-box {
+  width: 60%;
+  margin: auto;
+}
+
+#video {
+  margin: auto;
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 85%;
+  margin: auto;
+}
+
+.product-box {
+  width: 25%;
+  margin: 1.8vw;
+
+}
+
+.product-imgbox {
+  width: 100%;
+  height: 16vw;
+  border: 0.16vw solid;
+  border-color: var(--web-blue);
+  border-radius: 1vw;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1vw;
+}
+
+.product-label {
+  margin-top: 0vw;
+  margin-bottom: 0vw;
+  height: 3vw;
+  text-align: center;
+}
+
+
+button {
+  color: var(--web-blue);
+  background-color: white;
+  border-color: var(--web-blue);
+  border-radius: 0.15vw;
+  padding: 1vw 1.4vw 1vw 1.4vw;
+  transition: color 650ms, border 650ms;
+  }
+
+button:hover {
+  cursor: pointer;
+  color: var(--web-orange);
+  border-color: var(--web-orange);
+}
+
+button:active {
+  transition: none;
+  background-color: var(--web-gray);
+}
+
+
+#products-button {
+  display:block;
+  margin: auto;
+
+}
+
+#environment {
+  display: flex;
+  flex-direction: column;
+}
+
+.enviro-box {
+  display: flex;
+  width: 60vw;
+  height: 11vw;
+  margin: 1vw 0vw 1vw 0vw;
+  align-self: center;
+  justify-content: space-evenly;
+}
+
+.enviro-imgbox {
+  width: 20%;
+}
+
+.enviro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100vw;
+}
+
+.enviro-text {
+  width: 75%;
+  margin-left: 4vw;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+#offer {
+  margin: auto;
+  text-align: center;
+}
+
+#about {
+  width: 85vw;
+  margin: auto;
+  text-align: block;
+}
+
+.footer-hr {
+  border-bottom: solid;
+  border-width: 0.15vw;
+  border-color: var(--web-orange);
+  border-radius: 0.8vw;
+}
+
+footer {
+  background-color: var(--web-blue);
+  height: 100px;
+  padding: 3.5vw 10vw 3vw 10vw;
+  color: rgb(210, 205, 205);
+  font-size: 0.9rem;
+}
+
+#footer-box {
+  display: flex;
+}
+
+.footer-column {
+  
+}
