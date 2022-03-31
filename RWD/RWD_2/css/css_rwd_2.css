@@ -7,29 +7,28 @@ body {
 
 /* White line background and heading formatting */
 header {
-width: 100%;
-margin: -8px -8px 30px -8px;
-padding: 20px 10px 20px 10px;
-text-align: center;;
-font-family: Moul, Arial, sans-serif;
-background-color: #F7F9FF;
-overflow: hidden;
+  width: 100%;
+  margin: -8px -8px 30px -8px;
+  padding: 20px 10px 20px 10px;
+  text-align: center;
+  font-family: Moul, Arial, sans-serif;
+  background-color: #F7F9FF;
+  overflow: hidden;
 }
 
-
 main {
-  width: 600px;
   margin: auto;
+  width: 600px;
 }
 
 /* Responsive design for portable devices */
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   main {
     width: 65%;
   }
 }
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
   main {
     width: 100%;
   }
@@ -42,7 +41,7 @@ main {
   background-color: #F7F9FF;
   border: 1px solid #6F3FED;
   box-shadow: -8px 8px 12px #9159FC;
-  border-radius: 0px;
+  border-radius: 0;
   text-align: justify;
 }
 
@@ -53,7 +52,7 @@ main {
   line-height: 140%;
 }
 
-/* Purple  stripe used in header of container boxes*/
+/* Purple  stripe used in header of container boxes */
 .header-form {
   height: 35px;
   background-color: #6F2FED;
@@ -85,7 +84,7 @@ input:hover {
   border: 1px solid #6F3FED;
   background-color: #F7F9FF;
   box-shadow: -8px 8px 12px #9159FC;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 form {
@@ -98,7 +97,7 @@ form {
   color: red;
 }
 
-/* Adjust text about mandatory informations, to be smaller and less dirtruptive*/
+/* Adjust text about mandatory informations, to be smaller and less dirtruptive */
 #mandatory-info {
   font-size: 0.75em;
   font-style: italic;
@@ -109,7 +108,7 @@ legend {
 }
 
 label {
-  margin-bottom:8px;
+  margin-bottom: 8px;
 }
 
 /* Qestion + answer container */
@@ -124,7 +123,9 @@ label {
 }
 
 /* Text input design settings */
-#name, #email, #number {
+#name,
+#email,
+#number {
   margin-top: 10px;
   margin-bottom: 10px;
   width: 100%;
@@ -183,7 +184,7 @@ button {
   overflow: hidden;
 }
 
-/* Glowing button hover effect*/
+/* Glowing button hover effect */
 button:hover {
   animation-name: button-hover;
   animation-duration: 300ms;
@@ -195,28 +196,27 @@ button:hover {
   100% {
     background-color: hsl(260, 84%, 64%);
     color: white;
-    box-shadow: 0px 1px 10px #9159FC;
+    box-shadow: 0 1px 10px #9159FC;
   }
 }
 
-
 /* Ripple effect on click from w3schools.com */
-button:after {
+button::after {
   content: "";
   background: hsl(260, 84%, 84%);
   display: block;
   position: absolute;
   padding-top: 300%;
   padding-left: 350%;
-  margin-left: -20px!important;
+  margin-left: -20px !important;
   margin-top: -120%;
   opacity: 0;
   transition: all 0.8s;
 }
 
-button:active:after {
+button:active::after {
   padding: 0;
   margin: 0;
   opacity: 1;
-  transition: 0s
+  transition: 0s;
 }

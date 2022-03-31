@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Xemon's chemicals</title>
+    <title>Xemon's Chemicals</title>
 	  <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="css/css_rwd_3.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Eina&Roboto">
     <meta charset="utf-8">
     <meta name="author" content="Xemon">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Landing page for Freecodecamp challange">
+    <meta name="keywords" content="landing page, freecodecamp, challange, chemical, css, html">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
@@ -21,15 +21,16 @@
           </a>
         </div>
         <ul>
-          <li class="nav-link"><a href="#about">About Us</a></li>
-          <li class="nav-link"><a href="#environment">Enviroment</a></li>
-          <li class="nav-link"><a href="#products">Products</a></li>
-          <li class="nav-link"><a href="#quality">Quality</a></li>
+          <li><a class="nav-link" href="#about">About Us</a></li>
+          <li><a class="nav-link" href="#environment">Enviroment</a></li>
+          <li><a class="nav-link" href="#products">Products</a></li>
+          <li><a class="nav-link" href="#quality">Quality</a></li>
         </ul>
       </nav>
       <div id="header-text">
-        <h1>Xemon's chemicals</h1>
+        <h1>Xemon's Chemicals</h1>
         <p>Green purity from Czechia</p>
+      </div>
     </header>
 
     <main>
@@ -56,7 +57,7 @@
         </div>
         <div class="q-box">
           <div class="q-imgbox">
-            <img class="q-img" src="https://media.istockphoto.com/vectors/fast-delivery-logo-vector-icon-illustration-vector-id1209336082?b=1&k=20&m=1209336082&s=612x612&w=0&h=DH0OoKQaJSllFD9TEQ7-XuNOXGFpTCYCpeW2wRoP3kE=" alt="car with cargo" style="scale:1.5;">
+            <img class="q-img" id="car" src="https://media.istockphoto.com/vectors/fast-delivery-logo-vector-icon-illustration-vector-id1209336082?b=1&k=20&m=1209336082&s=612x612&w=0&h=DH0OoKQaJSllFD9TEQ7-XuNOXGFpTCYCpeW2wRoP3kE=" alt="car with cargo">
           </div>
           <div class="q-text">
             <p>
@@ -67,7 +68,7 @@
       </div>
 
       <div id="video-box">
-        <iframe id="video" width="100%" height="100%" src="https://www.youtube.com/embed/JgGBhvYJyWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="video" src="https://www.youtube.com/embed/nbTDU6csfGk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
       <div id="products">
@@ -89,7 +90,7 @@
           <h3 class="product-label">Nickel chloride hexahydrate</h3>
           <ul>
             <li>Suitable for nickel electroplating</li>
-            <li>Recomennded organic synthesis agent</li>
+            <li>Organic synthesis agent</li>
           </ul>
         <p class="product-price">32 <span class="unit">€/kg</span></p>
         </div>
@@ -137,9 +138,10 @@
           </ul>
           <p class="product-price">11 <span class="unit">€/kg</span></p>
         </div>
-        <br>
       </div>
-      <button id="products-button">More products</button>
+      <div id="button-box">
+        <button id="products-button">More products</button>
+      </div>
 
 
       <div id="environment">
@@ -158,31 +160,69 @@
       </div>
 
       <div id="offer">
-        <p>If you have some questions or if you are interested in some of our offers please submit your e-mail adress:</p>
-        <form id="form" action="" target="" method="post">
-          <input type="email" placeholder="">
+        <p>If you have some questions or if you are interested in some of our offers please submit your e-mail address:</p>
+        <form id="form" action="https://www.freecodecamp.com/email-submit)." target="_parent" method="post">
+          <input id="email" type="email" placeholder="your@email.com" name="email">
           <button id="submit" type="submit">Submit</button>
         </form>
       </div>
 
       <div id="about">
-        <h2>About Xemon's chemicals</h2>
+        <h2>About Xemon's Chemicals</h2>
         <p>
-          Xemon's chemicals is a prosperous company founded in 2015. We focus on the production of a wide range of chemicals in high purity and in accordance with the environment. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Xemon's chemicals is a prosperous company founded in 2015. We focus on the production of a wide range of chemicals in high purity and in accordance with the environment. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <p>With this history, Xemon's chemical can offer these business traits:</p>
         <ul>
-          <li>Good worldwide business contacts in the field, especially in Europe</li>
-          <li>Satisfied customers of a wide range of our products</li>
-          <li>It has met even the most demanding quality and environmental safety certificates</li>
+          <li>Good worldwide <strong>business contacts</strong> in the field, especially in Europe</li>
+          <li><strong>Satisfied customers</strong> of a wide range of our products</li>
+          <li>It has met even the <strong>most demanding</strong> quality and environmental safety <strong>certificates</strong></li>
         </ul>
       </div>
 
     </main>
 
     <footer>
+      <div id="footer-nav">
+        <div class="footer-nav-col">
+          <p class="footer-nav-header">Navigation</p>
+          <ul>
+            <li><a href="#quality">Quality</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#environment">Environment</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <p class="footer-nav-header">Our Production</p>
+          <ul>
+            <li><a href="">Anorganic Chemicals</a></li>
+            <li><a href="">Organic Chemicals</a></li>
+            <li><a href="">Chemicals for Analysis</a></li>
+            <li><a href="">Pharmaceutical Chemicals</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <p class="footer-nav-header">Learn More</p>
+          <ul>
+            <li><a href="">Tri-Recrystalization</a></li>
+            <li><a href="">EMAS III</a></li>
+            <li><a href="">Cooperation</a></li>
+            <li><a href="">Express Fast Deliver</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <p class="footer-nav-header">Terms & Conditions</p>
+          <ul>
+            <li><a href="">User Agreement</a></li>
+            <li><a href="">Cookie Policy</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="footer-hr"></div>
-      <p id="declaration">This page is a mockup used to present the author's portfolio. The content of the site is fictitious and the site does not offer the mentioned goods in any way. The author does not own any multimedia content (especially images) that is presented on the site.</p>
+      <p id="declaration">This page is a mockup used to present the author's portfolio. The content of the site is fictitious and the site does not offer the mentioned goods in any way. The author does not own any multimedial content that is presented on the site.</p>
       <p id="sign">2022 Xemon</p>
     </footer>
   </body>
