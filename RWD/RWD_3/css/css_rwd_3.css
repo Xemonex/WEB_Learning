@@ -4,14 +4,16 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0; /* No borders around page */
   font-family: Eina, sans-serif;
 
+  /* Defined three commonly used colors on this page */
   --web-blue: #03528B;
   --web-orange: #D65A17;
   --web-gray: rgb(210, 205, 205);
 }
 
+/* Flexible header image in background, always cover whole screen as header */
 header {
   width: 100vw;
   height: 100vh;
@@ -20,6 +22,7 @@ header {
   background-size: cover;
 }
 
+/* Navigation bar, always fixed on top of screen */
 #nav-bar {
   display: flex;
   position: fixed;
@@ -28,6 +31,7 @@ header {
   background-color: rgba(210, 205, 205, 0.92);
 }
 
+/* Logo wrap, opacity added to match nav bar opacity of rgba */
 #header-img-box {
   margin-left: 6vw;
   width: 20%;
@@ -35,6 +39,7 @@ header {
   opacity: 0.46;
 }
 
+/* Circular logo with orange border animation on hover, solid "stock" border added because otherwise annimation adding new one and it's glitching */
 #header-img {
   height: 100%;
   width: auto;
@@ -50,6 +55,7 @@ header {
   border-color: var(--web-orange);
 }
 
+/* Classic top navigation bar list, reverse flex used to align links from right side */
 #nav-bar ul {
   width: 80%;
   list-style: none;
@@ -64,6 +70,7 @@ header {
   align-self: center;
 }
 
+/* All links on web with orange animation on hover */
 a {
   transition-property: color;
   transition-duration: 650ms;
@@ -76,6 +83,7 @@ a:hover {
   color: var(--web-orange);
 }
 
+/* Header text wrap positioned on free space on background picture */
 #header-text {
   position: relative;
   top: 12vw;
@@ -99,6 +107,7 @@ h1 {
   color: #F9F0F0;
 }
 
+/* Wrap for "quality" part of page */
 #quality {
   display: flex;
   flex-wrap: wrap;
@@ -108,6 +117,7 @@ h1 {
   font-size: 1.4rem;
 }
 
+/* Box for each "quality point" */
 .q-box {
   display: flex;
   width: 50vw;
@@ -135,23 +145,27 @@ h1 {
   align-items: center;
 }
 
+/* Centering image of car, because it has different layout */
 #car {
   height: 160%;
   width: 160%;
   margin: -2.5vw 0 0 -2.9vw;
 }
 
+/* Wrap for youtube video */
 #video-box {
   display: flex;
   margin-bottom: 4vw;
 }
 
+/* Adding smooth edges to youtube video iframe */
 #video {
   margin: auto;
   border-radius: 1vw;
   box-shadow: 0.2vw 0.2vw 0.6vw 0.2vw var(--web-gray);
 }
 
+/* Important setting of video iframe ratio and size */
 iframe {
   width: 60vw;
   height: calc(60vw / 1.77);
@@ -159,6 +173,7 @@ iframe {
   border: 0;
 }
 
+/* Wrap of "products" part of page */
 #products {
   display: flex;
   flex-wrap: wrap;
@@ -167,6 +182,7 @@ iframe {
   margin: auto;
 }
 
+/* Invidual product boxes, width and margin set to align 3 boxes in row */
 .product-box {
   display: flex;
   flex-direction: column;
@@ -202,22 +218,26 @@ iframe {
   padding-left: 0;
 }
 
+/* Replacing dot with check symbol */
 .product-box ul li::before {
   content: '✓';
   font-size: 1.4rem;
   padding-right: 0.4vw;
 }
 
+/* Price row, *important* margin-top set to auto to align flex row to down */
 .product-price {
   text-align: center;
   font-weight: bold;
   margin-top: auto;
 }
 
+/* Wrap of button under product part */
 #button-box {
   margin-bottom: 4vw;
 }
 
+/* Button blue design, with animation to transfer to orange when hover */
 button {
   color: var(--web-blue);
   background-color: white;
@@ -239,17 +259,20 @@ button:active {
   background-color: var(--web-gray);
 }
 
+/* Aligning of button under product part to center */
 #products-button {
   display: block;
   margin: auto;
 }
 
+/* Wrap of "environment" part of page */
 #environment {
   display: flex;
   flex-direction: column;
   margin-bottom: 4vw;
 }
 
+/* Box for each "environment point", all parts not strictly needed, can be replaced by .product-box and so on */
 .enviro-box {
   display: flex;
   width: 50vw;
@@ -279,6 +302,7 @@ button:active {
   align-items: center;
 }
 
+/* Wrap for offer part of page */
 #offer {
   display: flex;
   flex-direction: column;
@@ -291,6 +315,7 @@ button:active {
   font-size: 1.2rem;
 }
 
+/* Wrap box for form + button, column-gap adde for prettier gap between input and button */
 #form {
   display: flex;
   width: 60vw;
@@ -299,17 +324,20 @@ button:active {
   align-self: center;
 }
 
+/* Enlarging font, smoothing edges to have more fittng look and to be easy clickable and readeble. */
 input {
   font-size: 1.1rem;
   padding-left: 0.4vw;
   border-radius: 0.2vw;
 }
 
+/* Changing button style for more fitting dimensions next to input */
 #offer button {
   padding-top: 0.6vw;
   padding-bottom: 0.6vw;
 }
 
+/* Wrap for about part of page */
 #about {
   width: 65vw;
   margin: auto;
@@ -321,12 +349,14 @@ input {
   font-size: 1rem;
 }
 
+/* Removing list dot style list, to be more fitting in design */
 #about li {
   list-style: none;
   margin-bottom: 0.6vw;
   font-size: 1rem;
 }
 
+/* Footer wrap */
 footer {
   background-color: var(--web-blue);
   padding: 3.5vw 15vw 3vw 15vw;
@@ -334,11 +364,13 @@ footer {
   overflow: hidden;
 }
 
+/* Wrap for navigation part of footer */
 #footer-nav {
   display: flex;
   padding-bottom: 1.6vw;
 }
 
+/* Wrap for each of columns in navigation part of the footer. Margin added to match all for columns in one raw with good layout over all width */
 .footer-nav-col {
   margin-right: 9vw;
 }
@@ -347,6 +379,7 @@ footer {
   font-weight: bold;
 }
 
+/* Left padding disabled for better look and uniform column */
 .footer-nav-col ul {
   padding-left: 0;
 }
@@ -360,6 +393,7 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Orange artificial horizontal rule */
 .footer-hr {
   border-bottom: solid;
   border-width: 0.15vw;
@@ -367,6 +401,7 @@ footer {
   border-radius: 0.7vw;
 }
 
+/* Complete design rebuild for tablets and smartphones */
 @media (max-width: 768px) {
   html {
     font-size: 1vw;
