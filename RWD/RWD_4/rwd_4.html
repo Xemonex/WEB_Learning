@@ -1,17 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title></title>
+  <title>Beefy Bash Basics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="css/css_rwd_4.css" type="text/css">
   <link rel="stylesheet" href=""> <!-- font-->
   <meta charset="UTF-8">
   <meta name="author" content="Xemon">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="description" content="Technical documentation page for Freecodecamp challange">
+  <meta name="keywords" content="technical documentation page, freecodecamp, challenge, bash, html, css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 
+  <div id="flex-wrap">
+    <nav id="navbar">
+      <header id="nav-header-box">
+        <div id="img-box">
+          <img src="https://img.myloview.cz/obrazy/face-cow-head-art-logo-design-inspiration-700-173325545.jpg" alt="cow head logo" onmouseover="text">
+        </div>
+        <h1>Bash Basics</h1>
+      </header>
+      <ul id="nav-list">
+        <li><a class="nav-link" href="#Introduction_to_Bash">Introduction to Bash</a></li>
+        <li><a class="nav-link" href="#What_is_around?">What is around?</a></li>
+        <li><a class="nav-link" href="#Traveling_through_the_filesystem">Traveling through the filesystem</a></li>
+        <li><a class="nav-link" href="#Let's_create_things">Let's create things</a></li>
+        <li><a class="nav-link" href="#Less_empty_world">Less empty world</a></li>
+        <li><a class="nav-link" href="#Peeking_inside_the_file">Peeking inside the file</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction_to_Bash">
+        <header>
+          <h2>Introduction to Bash</h2>
+        </header>
+        <p>Hi, welcome to my small guide glued for easier beginnings. First what is even bash? <br> Wikipedia offers this definition:</p>
+        <blockquote cite="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash is a Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell.</blockquote>
+        <p>
+          In my words, I would describe it as a tool that wraps around the kernel and allows you to use and set up a Unix-based operating system. And not only that, as a scripting language, bash can be used to write simple programs.<br>
+          However, Bash is not the only shell used on Unix-based systems. So how do we know what shell we are currently using? Let's find out. Let's open Terminal first. A window will appear in which there will probably be some such text:
+        </p>
+        <code>alex@alxcomp:~$</code>
+        <p>
+          This is a prompt to write what command you want to execute. First part, ie alex, is your username. "@" is a separator that separates the username from the hostname, simply your computer name. It is followed by ":" and is where you are on the file system. You will probably see "~", which is the home directory symbol. The prompt ends with "$", which is a symbol for the standard user, but we'll talk about that in the next lessons.
+        </p>
+        <p>
+          Now that we know what the prompt means, let's find out if we really use bash. Type "echo $SHELL" and press enter. If you are really in bash, you can see this:
+        </p>
+        <code>alex@alxcomp:~$ echo $SHELL<br>/bin/bash</code>
+        <p>Perfect! You managed your first bash command.</p>
+      </section>
+      <section class="main-section" id="What_is_around?">
+        <header>
+          <h2>What is around?</h2>
+        </header>
+        <p>
+          Ok, now we know that we are in our home directory because "~" says so. But how do we find out what files and folders are in our home directory. The ls command is used for this. It is based on the English word "listing". And that's exactly what the command will do.
+        </p>
+        <code>alex@alxcomp:~$ ls<br>Desktop Documents Downloads Music Pictures Pubic Videos</code>
+        <p>
+          Exactly according to the job description, the command listed the folders that are in your home folder. And they will probably be very similar to what you know from Windows or Mac OSX. Depending on the Linux flavor you use, folders, files, and possibly different file types may be distinguished by a different text color.
+        </p>
+        <p>Command "ls" has many other features that we will discuss in other lessons, such as:
+        <ul>
+          <li>Can distinguish between files, folders, links and others</li>
+          <li>Allows you to view the permissions on individual files</li>
+          <li>Displays hidden files</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Traveling_through_the_filesystem">
+        <header>
+          <h2>Traveling through the filesystem</h2>
+        </header>
+        <p>
+          When we know what folders are around us, let's try to look into some of them. The command "cd" from the English "change directory" is used for this. So let's try to move into the desktop. Type "cd Desktop" and then let's see if there's anything in the desktop.
+        </p>
+        <code>alex@alxcomp:~$ cd Desktop<br>alex@alxcomp:~/Desktop$ ls<br>alex@alxcomp:~/Desktop$</code>
+        <p>
+          In our case, nothing, so let's try elsewhere. But how do we get back? There are two dots for this. So "cd ..". With this command we get to the folder above. Then let's take a look into the Documents to see if there is anything there. By the way, you may notice that the path has changed at the prompt.
+        </p>
+        <code>alex@alxcomp:~/Desktop$ cd ..<br>alex@alxcomp:~/$ cd Documents<br>alex@alxcomp:~/Documents$ ls<br>alex@alxcomp:~/Documents$</code>
+        <p>Nothing again? :/ In the next lesson we are going to fix it.</p>
+      </section>
+      <section class="main-section" id="Let's_create_things">
+        <header>
+          <h2>Let's create things</h2>
+        </header>
+        <p>
+          For creating any file there is command "touch". However, the created file will be empty. Let's start with the file "file.txt". The suffix .txt is not so important for Linux, but it is convenient for easier orientation for users.
+        </p>
+        <code>alex@alxcomp:~/Documents$ touch file.txt<br>alex@alxcomp:~/Documents$</code>
+        <p>
+          Done, it was easy. As you have probably noticed, when the command is executed successfully, a new prompt will appear, without any error message. Now let's just check if we really created a new file. Surely you already know how.
+        </p>
+        <code>alex@alxcomp:~/Documents$ ls<br>file.txt<br>alex@alxcomp:~/Documents$</code>
+        <p>
+          The file.txt is there! But the file is still empty, how do we fill it? So let's move on to the next chapter.
+        </p>
+      </section>
+      <section class="main-section" id="Less_empty_world">
+        <header>
+          <h2>Less empty world</h2>
+        </header>
+        <p>
+          We encountered the command "echo" in the first chapter. This command forces the bash to tell us what we want. Let's try it. Let's greet the world with the classic "Hello World!". Don't forget the quotes around what we want bash to say.
+        </p>
+        <code>alex@alxcomp:~/Documents$ echo "Hello World!"<br>Hello World!<br>alex@alxcomp:~/Documents$</code>
+        <p>
+          So the world was greeted. Hmm, but we still have an empty file.txt, how do we fill it? To do this, you need to learn the ">" symbol. If we insert this symbol between what bash "says" and the selected file, then bash will overwrite the contents of this file with exactly what "said" or correctly "output". This type of symbol is called operator, we will talk about others later. Let's do it - "echo" Hello World! "> File.txt".
+        </p>
+        <code>alex@alxcomp:~/Documents$ echo "Hello World!" > file.txt<br>alex@alxcomp:~/Documents$</code>
+        <p>
+          Done. And in the next lesson, we'll look inside the file to see if everything went correctly.
+        </p>
+      </section>
+      <section class="main-section" id="Peeking_inside_the_file">
+        <header>
+          <h2>Peeking inside the file</h2>
+        </header>
+        <p>
+          In bash language, we can look inside any file that comes to mind with a simple "cat" command that comes from the English word concatenate. Surely you already know exactly what the command will look like.
+        </p>
+        <code>alex@alxcomp:~/Documents$ cat file.txt<br>Hello World!<br>alex@alxcomp:~/Documents$</code>
+        <p>
+          Everything works as it should! This way, you can look inside absolutely any file, but it will probably only make sense to you if the file is encoded as plain text. If you look at the picture like this, you will see the machine code. And you probably won't understand it. If so, you are not a human but a robot.
+        </p>
+        <p>This is the end of the first series of bash lessons.</p>
+        <p>In the next lessons you can look forward to:</p>
+        <ul>
+          <li>Creating folder</li>
+          <li>Root is not just about a tree</li>
+          <li>Permissions? Rights and liabilities!</li>
+        </ul>
+        <p>We are looking forward to seeing you soon. :-)</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p id="disclaimer">This page serves as a mockup for the presentation of the author's portfolio, not as a page with lessons that will be further developed. However, you can use this short demonstration to gain a really basic knowledge of bash and I will be happy for that. The author does not own any multimedia on this site in any way.</p>
+    <p id="signature">2022 Xemon</p>
+  </footer>
 </body>
